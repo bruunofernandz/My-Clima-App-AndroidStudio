@@ -121,17 +121,6 @@ class MainActivity : AppCompatActivity() {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
 
-        var stringRequest = StringRequest(Request.Method.GET, url,
-            Response.Listener<String> {
-                textView.text = "Resposta: ${it.substring(0, 500)}"
-                Log.d("RESPONSE"," - "+it)
-            }, Response.ErrorListener {
-                textView.text = it.localizedMessage
-                Log.d("RESPONSE ERROR"," - "+it.localizedMessage)
-            })
-        queue.add(stringRequest)
-
-
         if (checkPermissions(android.Manifest.permission.ACCESS_COARSE_LOCATION,
                 android.Manifest.permission.ACCESS_FINE_LOCATION)) {
             getLastLocation()

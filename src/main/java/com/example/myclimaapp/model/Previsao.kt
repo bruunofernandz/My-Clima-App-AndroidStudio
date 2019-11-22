@@ -1,3 +1,5 @@
+import java.io.Serializable
+
 class Previsao : Serializable {
     var data: String? = null
     var diaDaSemana: String? = null

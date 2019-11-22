@@ -1,4 +1,7 @@
 package com.example.climaapp.model
+
+import Previsao
+
 class Clima {
 
     var temperatura: Int? = null
